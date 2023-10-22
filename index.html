@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровые Новости</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Подключение стилей Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header id="main_header">
+        <div class="main_header_block left">
+            <h1>Игровой Мир: Последние Новости и Тренды</h1>
+            <p>Игры, Технологии и Забавы для Вас</p>
+        </div>
+        <div class="main_header_block right">
+            <nav>
+                <ul>
+                    <li><a href="#">Главные Новости</a></li>
+                    <li><a href="#">Обзоры Игр</a></li>
+                    <li><a href="#">События и Турниры</a></li>
+                    <li><a href="#" id="openModalBtn">Связаться с нами</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="modal-container" id="modalContainer">
+        <div class="mymodal" id="myModal">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Форма обратной связи</h2>
+            <form id="feedbackForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" name="phone" required>
+                <div class="error" id="phoneError"></div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+
+    
+    <main class="main_container">
+        <aside class="main_left">
+            <h2>Популярные Игры</h2>
+            <ul>
+                <li><a href="#">The Witcher 4: Все, что нужно знать</a></li>
+                <li><a href="#">Elden Ring: Геймплей и Сюжет</a></li>
+                <li><a href="#">Valorant: Обновление и Новые Агенты</a></li>
+                <li><a href="#">Cyberpunk 2077: Возвращение на Арену</a></li>
+            </ul>
+        </aside>
+
+        <section class="main_center">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Индикаторы слайдов -->
+                <ul class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ul>
+        
+                <!-- Слайды -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/1.jpg" alt="Изображение 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/2.jpg" alt="Изображение 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/3.jpg" alt="Изображение 3">
+                    </div>
+                </div>
+        
+                <!-- Стрелки для переключения слайдов -->
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Предыдущий</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Следующий</span>
+                </a>
+            </div>
+            <article>
+                <h2>Грандиозный Релиз CyberScape: Виртуальный Мир Будущего!</h2>
+                <p>Сегодня компания Quantum Entertainment выпустила долгожданную многопользовательскую онлайн-игру CyberScape. Игроки смогут погрузиться в захватывающий мир будущего, сражаться с киберпреступниками и исследовать уникальные киберпространства.</p>
+            </article>
+
+            <article>
+                <h2>Запуск World Championship в Dota 2: Лучшие Команды Мира Готовы Сразиться</h2>
+                <p>Сегодня начинается мировой чемпионат по Dota 2, где лучшие команды из разных стран будут соревноваться за титул чемпионов. Ожидается, что это событие станет одним из самых захватывающих в истории игры.</p>
+            </article>
+
+            <article>
+                <h2>Выход Cyberpunk 2077: Ожидания и Реальность</h2>
+                <p>С выходом Cyberpunk 2077 возникло огромное ожидание среди игроков. Но какова реальность игры после релиза и какие проблемы столкнулись разработчики?</p>
+            </article>
+
+            <article>
+                <h2>Революция в виртуальной реальности: Что принесет Oculus Quest 2</h2>
+                <p>Выход Oculus Quest 2 обещает изменить представление об играх в виртуальной реальности. Какие новые возможности и игровые впечатления ожидают игроков?</p>
+            </article>
+
+            <article>
+                <h2>Игровая индустрия в 2023 году: Тренды и Ожидания</h2>
+                <p>Какие новые технологии и игры ожидаются в игровой индустрии в ближайшем будущем? Какие тренды станут актуальными для геймеров в 2023 году?</p>
+            </article>
+        </section>
+
+        <aside class="main_right">
+            <h2>Последние Трейлеры</h2>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/mHDEDDrGYvo?si=7O3DuX5nt8fUXoT3" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/kfYEiTdsyas?si=TawiWmj2-FUs_ANV" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/lfuqPdxdQ4U?si=ZvA_pDMFUuLxjxxl" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/tlBvBQCZKL8?si=FxKeXEvyeM8QewEM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/difL_diHo2o?si=auFBe4SnbU24qcId" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="main_footer">
+        <p>&copy; 2023 Игровые Новости. Все права защищены.</p>
+    </footer>
+
+    <script src="./main.js"></script>
+    <!-- Подключение скриптов Bootstrap JS и jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* Обнуление стилей и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#main_header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    align-items: center;
+}
+
+#main_header h1 {
+    font-size: 32px;
+}
+
+#main_header p {
+    font-size: 16px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.main_container {
+    max-width: 1440px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_left, .main_right {
+    flex-basis: 20%;
+    width: 100%;
+}
+
+.main_left {
+    padding: 0 20px;
+}
+
+.main_center {
+    flex-basis: 60%;
+    padding: 0 40px;
+}
+
+.main_left h2, .main_right h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#main_header .left {
+    flex: 9;
+}
+
+#main_header .right {
+    flex: 3;
+}
+
+.main_left ul {
+    list-style-type: none;
+}
+
+.main_left ul li {
+    margin-bottom: 10px;
+}
+
+.main_left ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main_center article {
+    margin-bottom: 20px;
+}
+
+.main_center h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main_center p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.main_right .video-wrapper {
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    max-width: 100%;
+}
+
+.main_footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#myCarousel {
+    margin-bottom: 40px;
+}
+
+.carousel-item img {
+    width: 100%;
+}
+
+/* Форма обратной связи */
+
+/* Стили для модального окна */
+
+.modal-container {
+    z-index: 999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+    opacity: 1;
+}
+
+.mymodal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mymodal.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* Форма обратной связи */
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .main_header_block {
+        text-align: center;
+    }
+
+    .main_container {
+        max-width: 540px;
+        flex-direction: column; /* Одна колонка для мобильных устройств */
+        padding: 0 30px;
+    }
+
+    .main_left, .main_right {
+        flex-basis: 100%; /* Занимают 100% ширины для мобильных устройств */
+    }
+
+    .main_right {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main_left {
+        justify-content: space-around;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .main_center {
+        flex-basis: 100%; /* Занимает 100% ширины для мобильных устройств */
+        padding: 0;
+    }
+
+    #main_header {
+        flex-direction: column; /* Одна колонка для мобильных устройств */
+    }
+
+    nav ul {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #555;
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Стили для разрешения экрана от 769px до 1024px (планшеты) */
+    .main_left, .main_right {
+        flex-basis: 100%; /* Увеличенная ширина для планшетов */
+        align-items: center;
+        display: flex;
+    }
+
+    .main_left {
+        justify-content: space-around;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .main_right {
+        flex-direction: column;
+    }
+
+    .video-container {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .main_container {
+        max-width: 720px;
+        flex-direction: column; /* Одна колонка для планшетов*/
+        padding: 0 20px;
+    }
+}
